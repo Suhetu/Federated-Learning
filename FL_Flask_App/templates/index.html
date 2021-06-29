@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disease Enquiry Form</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, select, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: #eee;
+      }
+      body {
+      background: url("https://image.freepik.com/free-photo/medical-stethoscope-blue-background-health-care_106006-1364.jpg") no-repeat center;
+      background-size: cover;
+      }
+      h1, h2 {
+      text-transform: uppercase;
+      font-weight: 400;
+      }
+      h2 {
+      margin: 0 0 0 8px;
+      }
+      .main-block {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5); 
+      }
+      .left-part, form {
+      padding: 25px;
+      }
+      .left-part {
+      text-align: center;
+      }
+      .fa-graduation-cap {
+      font-size: 72px;
+      }
+      form {
+      background: rgba(0, 0, 0, 0.7); 
+      }
+      .title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      }
+      .info {
+      display: flex;
+      flex-direction: column;
+      }
+      input, select {
+      padding: 5px;
+      margin-bottom: 30px;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid #eee;
+      }
+      input::placeholder {
+      color: #eee;
+      }
+      option:focus {
+      border: none;
+      }
+      option {
+      background: black; 
+      border: none;
+      }
+      .checkbox input {
+      margin: 0 10px 0 0;
+      vertical-align: middle;
+      }
+      .checkbox a {
+      color: #26a9e0;
+      }
+      .checkbox a:hover {
+      color: #85d6de;
+      }
+      .btn-item, button {
+      padding: 10px 5px;
+      margin-top: 20px;
+      border-radius: 5px; 
+      border: none;
+      background: #26a9e0; 
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 400;
+      color: #fff;
+      }
+      .btn-item {
+      display: inline-block;
+      margin: 20px 5px 0;
+      }
+      button {
+      width: 100%;
+      }
+      button:hover, .btn-item:hover {
+      background: #85d6de;
+      }
+      @media (min-width: 568px) {
+      html, body {
+      height: 100%;
+      }
+      .main-block {
+      flex-direction: row;
+      height: calc(100% - 50px);
+      }
+      .left-part, form {
+      flex: 1;
+      height: auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-block">
+      <div class="left-part">
+        <i class="fas fa-user-md fa-9x"></i>
+        <h1>A predictive disease project</h1>
+        <p>This machine learning system can diagnose two acute inflammations of bladder: 'Inflammation of Urinary Bladder' and 'Nephritis of Renal Pelvis Origin'. This medical dataset truly needs privacy! Because we cannot divulge the sexually-transmitted diseases of patients. So, what we learned about PySyft and OpenMined is applied in this project. Federated learning will protect the privacy of datasets in each hospital and at the same time, a more robust machine learning model will benefit all hospitals.</p><br>
+        <h4>Created By:<br>
+          Himanshu Bhalani<br>
+          Suhetu Ring</h4>
+      </div>
+      <form action="/result" method="POST">
+        <div class="title">
+          <i class="fas fa-pencil-alt"></i> 
+          <h2>Enquire here</h2>
+        </div>
+        <div class="info">
+          <input class="fname" type="text" name="fullname" placeholder="Full name">
+          <input type="text"  placeholder="Email">
+          <input type="text"  placeholder="Phone number">
+          <input type="number" name="temperature" placeholder="Temperature (in Celcius)">
+          <select name ="occ_n">
+            <option value="Occurrence_of_nausea" selected>Occurrence of Nausea</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <select name ="lum_p">
+            <option value="Lumbar_pain" selected>Lumbar Pain</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <select name ="uri_p">
+            <option value="Urine_pushing" selected>Urine Pushing</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <select name ="mig_p">
+            <option value="Micturition_pains" selected>Micturition Pains</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <select name ="bur_u">
+            <option value="Burning_of_urethra_itch_swelling_of_urethra_outlet" selected>Burning of Urethra/Itch/Swelling of Urethra Outlet</option>
+            <option value="yes">Yes</option>a
+            <option value="no">No</option>
+          </select>
+          <select name ="disease">
+            <option value="Disease" selected>Disease</option>
+            <option value="Inflamation_of_urinary_bladder">Inflamation of Urinary Bladder</option>a
+            <option value="Nephritis_of_renal_pelvis_origin">Nephritis of Renal Pelvis Origin</option>
+          </select>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="checkbox"><span>I agree to the Privacy Poalicy for HS Hospital</a></span>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>
